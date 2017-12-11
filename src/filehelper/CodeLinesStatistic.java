@@ -79,7 +79,7 @@ public class CodeLinesStatistic {
 		}
 		
 		out("@@Cost times "
-				+ Tools.getStringByTime(System.currentTimeMillis() - startTimes));
+				+ Tools.calcTime(System.currentTimeMillis() - startTimes));
 		out("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
 	}
