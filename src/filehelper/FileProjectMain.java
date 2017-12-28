@@ -227,12 +227,12 @@ public class FileProjectMain extends JFrame implements ActionListener {
 										{
 											out(Tools.getFill(showDirLenTemp, " ") + obj.getName() 
 											+ "\t" + new Date(mtime).toLocaleString()
-											+ "  " + Tools.getStringBySize(size)
+											+ "  " + Tools.calcSize(size)
 													);
 										}else{
 											out(obj.getAbsolutePath() 
 											+ "\t" + new Date(mtime).toLocaleString()
-											+ "  " + Tools.getStringBySize(size)
+											+ "  " + Tools.calcSize(size)
 										);
 										}
 										
@@ -283,13 +283,13 @@ public class FileProjectMain extends JFrame implements ActionListener {
 									{
 										out(obj.getName() 
 										+ "  " + new Date(mtime).toLocaleString()
-										+ "  " + Tools.getStringBySize(size)
+										+ "  " + Tools.calcSize(size)
 										+ " -> " + tofile
 												);
 									}else{
 										out(obj.getAbsolutePath() 
 										+ "  " + new Date(mtime).toLocaleString()
-										+ "  " + Tools.getStringBySize(size)
+										+ "  " + Tools.calcSize(size)
 										+ " -> " + tofile
 									);
 									} 
