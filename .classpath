@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="src/mysql-connector-java-5.0.5-bin.jar"/>
-	<classpathentry kind="lib" path="src/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="lib/pinyin4j-2.5.0.jar.jar"/>
-	<classpathentry kind="lib" path="lib/poi-3.14-20160307.jar"/>
-	<classpathentry kind="lib" path="lib/poi-examples-3.14-20160307.jar"/>
-	<classpathentry kind="lib" path="lib/poi-excelant-3.14-20160307.jar"/>
-	<classpathentry kind="lib" path="lib/poi-ooxml-3.14-20160307.jar"/>
-	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.14-20160307.jar"/>
-	<classpathentry kind="lib" path="lib/poi-scratchpad-3.14-20160307.jar"/>
-	<classpathentry kind="lib" path="lib/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/curvesapi-1.03.jar"/>
-	<classpathentry kind="lib" path="lib/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="lib/DatePicker-V0.99-2006.09.01.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/database"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mylib"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/base"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="src/mysql-connector-java-5.0.5-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/pinyin4j-2.5.0.jar.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-3.14-20160307.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-examples-3.14-20160307.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-excelant-3.14-20160307.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-ooxml-3.14-20160307.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-ooxml-schemas-3.14-20160307.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/poi-scratchpad-3.14-20160307.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-codec-1.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/curvesapi-1.03.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/DatePicker-V0.99-2006.09.01.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/database"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/mylib"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/base"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
