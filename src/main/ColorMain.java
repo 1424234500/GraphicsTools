@@ -30,7 +30,7 @@ import java.util.List;
 import javax.swing.JButton;
 
 import util.Fun;
-import util.RobotHelp;
+import util.RobotUtil;
 import util.ThreadHelp;
 import util.Tools;
 
@@ -313,10 +313,10 @@ public class ColorMain implements AdjustmentListener, TextListener, ActionListen
 		  x = e.getX();
           y = e.getY();
           System.out.println("x,y:" + x + ", " + y);
-          Color c = RobotHelp.getColor();
+          Color c = RobotUtil.getColor();
           String str = Tools.color2string(c);
           System.out.println(""+str);
-          RobotHelp.setSysClipboardText(str);
+          RobotUtil.setSysClipboardText(str);
 	}
 
 

@@ -41,7 +41,7 @@ import util.FileDialog;
 import util.FileUtil;
 import util.Fun;
 import util.Tools;
-import util.UniqueRandom;
+import util.RandomUtil;
 import util.setting.Setting;
 
 public class FileProjectMain extends JFrame implements ActionListener {
