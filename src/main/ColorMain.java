@@ -3,7 +3,6 @@ package main;
 import java.awt.AWTException;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.GridLayout;
@@ -31,8 +30,8 @@ import javax.swing.JButton;
 
 import util.Fun;
 import util.RobotUtil;
-import util.ThreadHelp;
 import util.Tools;
+import util.thread.ThreadHelp;
 
 
 public class ColorMain implements AdjustmentListener, TextListener, ActionListener, MouseMotionListener {
