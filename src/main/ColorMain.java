@@ -30,8 +30,8 @@ import javax.swing.JButton;
 
 import util.Fun;
 import util.RobotUtil;
+import util.ThreadUtil;
 import util.Tools;
-import util.thread.ThreadHelp;
 
 
 public class ColorMain implements AdjustmentListener, TextListener, ActionListener, MouseMotionListener {
@@ -122,8 +122,12 @@ public class ColorMain implements AdjustmentListener, TextListener, ActionListen
 		f.setSize(800, 600);
 		f.setLocation(50, 50);
 		f.addMouseMotionListener(this);
-		thread.start();
-	
+		
+		ThreadUtil.execute(new Runnable(){
+			public void run() {
+				threadColor();
+			} 
+		});
 	}
 	
 	 
@@ -188,6 +192,7 @@ public class ColorMain implements AdjustmentListener, TextListener, ActionListen
 	int ffff = 0;
 
 	boolean flagThread = false;
+
 	public void threadColor(){
 		//r,g,b 
 		int deta = 1;
@@ -203,6 +208,7 @@ public class ColorMain implements AdjustmentListener, TextListener, ActionListen
 		int r = max, g = 0, b = 0;  
 		int ff = 0;
 		int oldf = -1;
+		
 		while(true){
 			if(flagThread){
 				
@@ -249,21 +255,9 @@ public class ColorMain implements AdjustmentListener, TextListener, ActionListen
 			changeColor(r, g, b);
 
 			}
-			ThreadHelp.sleep(sleep);
+			ThreadUtil.sleep(sleep);
 		}
-		
-		
-		
-		
-		
-		
 	}
-	 Thread thread = ThreadHelp.thread(new Fun<Long>() {
-			public void make(Long obj) {
-				threadColor();
-			}
-	});
-	 
 	public void actionPerformed(ActionEvent e) {
 		try {
 			if (e.getSource() == jbone) {
@@ -313,7 +307,7 @@ public class ColorMain implements AdjustmentListener, TextListener, ActionListen
           y = e.getY();
           System.out.println("x,y:" + x + ", " + y);
           Color c = RobotUtil.getColor();
-          String str = Tools.color2string(c);
+          String str = c.toString(); 
           System.out.println(""+str);
           RobotUtil.setSysClipboardText(str);
 	}

@@ -293,8 +293,7 @@ public class FileProjectMain extends JFrame implements ActionListener {
 										+ " -> " + tofile
 									);
 									} 
-							
-									FileUtil.copyFile(fromfile, tofile);
+									FileUtil.cp(fromfile, tofile);
 								}
 							}
 						}else if(obj.isDirectory()){
@@ -321,8 +320,8 @@ public class FileProjectMain extends JFrame implements ActionListener {
 	public boolean ifTime(String fromtime, String totime, long mtime){
 		boolean res = false;
 
-		long ftime = Tools.dateFormat(fromtime, "yyyy-MM-dd HH:mm:ss").getTime();
-		long ttime = Tools.dateFormat(totime, "yyyy-MM-dd HH:mm:ss").getTime();
+		long ftime = Tools.format(fromtime, "yyyy-MM-dd HH:mm:ss").getTime();
+		long ttime = Tools.format(totime, "yyyy-MM-dd HH:mm:ss").getTime();
 		
 		if(fromtime.equals("")){
 			res = true;

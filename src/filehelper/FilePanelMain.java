@@ -259,7 +259,6 @@ public class FilePanelMain extends JFrame implements ActionListener {
 				fileslen = (tempList.length-dirslen);
 				out("个数." + dirslen + "  \n文件------------个数."+ fileslen + " $\n");
 				sequence = RandomUtil.getSequence(fileslen, 0);
-				out("随机序列：" + Tools.ints2string(sequence) ) ;
 				for (int i = 0; i < tempList.length; i++) { // 再添加所有文件
 					if ( tempList[i].isFile()) {
 

@@ -19,6 +19,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/database"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/mylib"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/base"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/BaseSSM"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
