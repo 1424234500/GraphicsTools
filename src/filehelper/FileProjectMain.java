@@ -216,7 +216,7 @@ public class FileProjectMain extends JFrame implements ActionListener {
 				
 				
 				FileUtil.showDir(path, new Fun<File>() {
-					public void make(File obj) {
+					public Object make(File obj) {
 						if(obj.isFile()){
 							long mtime = obj.lastModified();
 							long size = obj.length();
@@ -246,6 +246,7 @@ public class FileProjectMain extends JFrame implements ActionListener {
 						}else {
 							 
 						}
+						return obj;
 					}
 				});
 				
@@ -268,7 +269,7 @@ public class FileProjectMain extends JFrame implements ActionListener {
 
 			
 			FileUtil.showDir(path, new Fun<File>() {
-				public void make(File obj) {
+				public Object make(File obj) {
 					if(obj.isFile()){
 						long mtime = obj.lastModified();
 						long size = obj.length();
@@ -304,6 +305,7 @@ public class FileProjectMain extends JFrame implements ActionListener {
 					}else {
 						 
 					}
+					return obj;
 				}
 			});
  
