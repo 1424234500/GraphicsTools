@@ -116,12 +116,14 @@ public class EncodeMain extends JFrame implements ActionListener {
 
 			if((new File(path).isFile())){
 				FileUtil.readByType(path,  new Fun<String>() {
-					public void make(String obj) {
+					public Object make(String obj) {
 						jtain.append(obj +"\n" ); 
 						jtain.setCaretPosition(jtain.getText().length());	//锁定最底滚动
+						return obj;
 					}
 				}, new Fun<ArrayList<ArrayList<Object>>>() {
-					public void make(ArrayList<ArrayList<Object>> obj) {
+
+					public <T> T make(ArrayList<ArrayList<Object>> obj) {
 						for(ArrayList al : obj){
 							for(Object o : al){
 								jtain.append(" " + o.toString() + "\t ");
@@ -129,34 +131,40 @@ public class EncodeMain extends JFrame implements ActionListener {
 							jtain.append("\n");
 						}
 						ExcelUtil.writeExcel(obj, FileUtil.getFilePath(path)+"/" + "ToolSave"+"/"+FileUtil.getFileNameOnly(path)+".xls");
+						return null;
 					}
+					
 				});
 				jtain.append("\n"); 
 				
 			}else{
 				FileUtil.controlDirs(path, new Fun<File>() {
-					public void make(File file) {
+					public Object make(File file) {
 						final String ppath = file.getAbsolutePath();
 						FileUtil.mkdir(FileUtil.getFilePath(ppath)+"/" + "ToolSave");
 						jtain.append("\nFile: " + file.getAbsolutePath() +  "\n"
 								+ "############-start##############-\n" );
 						FileUtil.readByType(file.getAbsolutePath(),  new Fun<String>() {
-							public void make(String obj) {
+							public Object make(String obj) {
 								jtain.append(obj +"\n" ); 
+								return null;
 							}
 						}, new Fun<ArrayList<ArrayList<Object>>>() {
-							public void make(ArrayList<ArrayList<Object>> obj) {
-								for(ArrayList al : obj){
-									for(Object o : al){
-										jtain.append(" " + o.toString() + "\t ");
+							public <T> T make(ArrayList<ArrayList<Object>> obj) {
+									for(ArrayList al : obj){
+										for(Object o : al){
+											jtain.append(" " + o.toString() + "\t ");
+										}
+										jtain.append("\n");
 									}
-									jtain.append("\n");
-								}
-								ExcelUtil.writeExcel(obj, FileUtil.getFilePath(ppath)+"/" + "ToolSave"+"/"+FileUtil.getFileNameOnly(ppath)+".xls");
+									ExcelUtil.writeExcel(obj, FileUtil.getFilePath(ppath)+"/" + "ToolSave"+"/"+FileUtil.getFileNameOnly(ppath)+".xls");
+									return null;
 							}
+							
 						});
 						jtain.append("\n############-end##############-\n" );
 						//jtain.setCaretPosition(jtain.getText().length());	//锁定最底滚动
+						return ppath;
 					}
 				});
 			}
@@ -180,8 +188,9 @@ public class EncodeMain extends JFrame implements ActionListener {
 				int count = Integer.parseInt(ss[1]);
 				in("\n############-start##############-\n" + "len,count= " +len+","+count);
 				Pinyin.random(len,count, new Fun<String>(){
-					public void make(String obj) {
+					public Object make(String obj) {
 						in(obj);
+						return null;
 					}
 				} );
 				in("\n############-end##############-\n" );
@@ -191,8 +200,9 @@ public class EncodeMain extends JFrame implements ActionListener {
 			int count = Integer.parseInt(jtfchosefile.getText());
 			in("\n############-start##############-\n" + " count= "  +count);
 			Pinyin.randomName(count, new Fun<String>(){
-				public void make(String obj) {
+				public Object make(String obj) {
 					in(obj);
+					return null;
 				}
 			} );
 			in("\n############-end##############-\n" );
